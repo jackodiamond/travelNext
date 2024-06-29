@@ -1,0 +1,139 @@
+/* Companion.css */
+
+.companion-page {
+  display: flex;
+}
+
+.user-list {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.user-list h2 {
+  margin-bottom: 10px;
+}
+
+.user-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-list-item {
+  display: flex;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.user-list-item:hover {
+  background-color: #f0f0f0;
+}
+
+.user-list-item.selected {
+  background-color: #cfd8dc; /* Selected item color */
+}
+
+.online, .offline {
+  margin-left: 10px;
+  color: #666;
+}
+
+.conversation {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.conversation h2 {
+  margin-bottom: 10px;
+}
+
+.conversation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.message {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+}
+
+.even {
+  background-color: #f0f0f0; /* Light background color for even messages */
+}
+
+.odd {
+  background-color: #e0e0e0; /* Lighter background color for odd messages */
+}
+
+.username {
+  font-weight: bold;
+}
+
+.message-text {
+  margin-top: 5px;
+}
+
+.user-profile-pic{
+  width:20px;
+  height:20px;
+}
+
+.conversation-container {
+  max-height: 500px; /* Set the maximum height for the conversation container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-bottom: 70px; /* Space for the input container */
+  width: 50%;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.conversation-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.input-container {
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  left: 0;
+  background-color: #f9f9f9;
+  padding-right: 20px;
+  padding-left: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.input-container button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.conversation-container {
+  display: none;
+}
+
+.conversation-container.visible {
+  display: block;
+}
+
+.status-icon {
+ margin-left: 30px;
+ margin-top: 4px;
+ width: 10px;
+ height: 10px;
+}

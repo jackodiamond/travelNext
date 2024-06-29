@@ -1,0 +1,25 @@
+.menu-button {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+.menu-container {
+  display: grid;
+  grid-template-columns: 1fr auto;  /* Defines columns: flexible, then fixed */
+  align-items: center;          /* Aligns items vertically */
+  padding:5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem; /* Adds space between the buttons */
+}
+
+.logout-container {
+  margin-left: auto;
+
+}
+
+.logout-button {
+ display: flex-end;
+}

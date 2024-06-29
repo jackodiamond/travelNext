@@ -1,0 +1,99 @@
+.profile-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover-photo {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: top;
+}
+
+.profile-info {
+  display: flex;
+  align-items: flex-start;
+  margin-top: -50px; /* Adjust as needed to overlap cover photo */
+}
+
+.profile-pic-container {
+  position: relative;
+}
+
+.profile-pic {
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.profile-name {
+  position: absolute;
+  top: 10px;
+  margin-top: 50px;
+  left: calc(100% + 20px); /* Adjust spacing between profile pic and name */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.bio {
+  display: flex; /* Enable flexbox layout */
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 30px; /* Maintain the maximum height */
+  justify-content: flex-end;
+  align-items: center; /* Center items vertically */
+}
+
+.friend-buttons {
+ position: right;
+  margin-top: 90px;
+  margin-right: 100px;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  max-height: 30px; /* Maintain the maximum height */
+  align-self: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.friend-button{
+  background-color: #80cff3;
+  color: #fff;
+  border: none;
+  padding:  10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  height :30px;
+  cursor: pointer;
+  display:flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.friend-button:hover {
+  background-color: #0056b3;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom:0;
+  right:0;
+  padding-bottom:10px;
+  width: 25px; /* Adjust the size as needed */
+  height: 35px; /* Adjust the size as needed */
+  align-self: center;
+}
+
+.edit-icon-bio {
+  position: relative;
+  padding-left:10px;
+  width: 25px; /* Adjust the size as needed */
+  height: 20px; /* Adjust the size as needed */
+  align-self: center;
+}

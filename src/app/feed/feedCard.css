@@ -1,0 +1,161 @@
+.feed-card {
+  cursor: pointer;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom:10px;
+  overflow: hidden;
+  margin-left:10px;
+  margin-right:10px;
+  padding: 15px;
+  position: relative; /* Add relative positioning */
+}
+
+.feed-circle {
+  position: absolute; /* Position the circle */
+  z-index: 1; /* Ensure it's above the image */
+}
+
+.circle-image {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  border-radius: 50%; /* Make it circular */
+}
+
+.author-name {
+  /* Add styles as needed */
+  padding-left: 35px;
+  vertical-align: middle;
+  padding-bottom: 7px;
+}
+
+.feed-card-left {
+  position: relative; /* Add relative positioning */
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+}
+
+.feed-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Make it circular */
+}
+
+
+.feed-card-right {
+  flex: 1 1 auto;
+  padding-left: 20px;
+}
+
+.feed-author {
+  
+  display: flex;
+  align-items: center;
+}
+
+.feed-buttons {
+  margin-top: 30px;
+  display: inline-flex;
+}
+
+.like-button,
+.comment-button {
+  outline: 2px solid #0056b3;
+  color: #3b11e6; 
+  border: none;
+  padding: 8px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  align-self: center;
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 50px; /* Adjust width to fit content */
+  height: 20px; /* Adjust height to fit content */
+}
+
+.icon {
+  width: 16px; /* Adjust the size of the icon */
+  height: 16px;
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.feed-title {
+ 
+  font-weight: bold;
+  margin-bottom: 10px; /* Adjust spacing as needed */
+  color: #000; /* Adjust color as needed */
+}
+
+.feed-text {
+  overflow: hidden;
+  max-height: 100px; /* Example limited height */
+  transition: max-height 0.5s ease; /* Add transition effect for smooth expansion */
+}
+
+.feed-text.expanded {
+  max-height: none; /* Remove height limit when expanded */
+}
+
+.comment-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.comments {
+  margin-bottom: 20px;
+}
+
+.comment {
+  background-color: #ffffff; /* Add background color to each comment */
+  padding: 10px; /* Add padding to each comment */
+  border-radius: 8px; /* Add border-radius to each comment */
+  margin-bottom: 10px;
+}
+
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-input {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+
+}
+
+.comment-input-input {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 60%;
+}
+
+.comment-input-button {
+  padding: 8px 20px;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-input button:hover {
+  background-color: #0056b3;
+}
+
+.location-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px; /* Adjust the size as needed */
+  height: 24px; /* Adjust the size as needed */
+  cursor: pointer;
+}
