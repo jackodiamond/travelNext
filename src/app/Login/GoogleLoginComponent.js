@@ -6,6 +6,7 @@ import { jwtDecode } from "jwt-decode";
 import UserContext from '../components/UserContext';
 import { useRouter } from 'next/navigation';
 import baseUrl from '../../../config';
+import { connectToWebSocket, setSocketUser } from '../components/WebSocketComponent';
 
 const clientId = '966194525011-ofeb7gv0v4coqfvupvh76sdv3bv9la0n.apps.googleusercontent.com'; // Replace with your actual Client ID
 
@@ -39,12 +40,14 @@ const GoogleLoginComponent = () => {
       if (!res.ok) {
         throw new Error('Failed to log in with Google');
       }
-  
+   
       const data = await res.json();
       console.log('Backend response:', data);
       setUsername(data.username);
+      setSocketUser(data.username);
       router.push('/feed');
       login();
+      connectToWebSocket();
   };
 
   return (

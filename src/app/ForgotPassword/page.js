@@ -9,7 +9,7 @@ export default function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/send-forgot-password-email', {
+      const response = await fetch('https://brxac3cboj.execute-api.ap-south-1.amazonaws.com/nana/send-forgot-password-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

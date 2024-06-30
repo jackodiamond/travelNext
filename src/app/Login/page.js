@@ -79,11 +79,11 @@ const Login = () => {
         </p>
 
         <GoogleLoginComponent/>
-        {/*
+        
         <p>
           Don't have an account? <Link href="/Signup">Signup instead</Link>
         </p>
-        */}
+        
       </div>
     </div>
   );

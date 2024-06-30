@@ -55,7 +55,9 @@ const setNameHandler = (name) => {
 };
 
 const getUsers = () => {
+  console.log("web socket 01")
   if (ws && isConnected) {
+    console.log("web socket 02")
     ws.send(JSON.stringify({ action: 'userList' }));
   }
 };

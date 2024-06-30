@@ -192,6 +192,7 @@ const Companion = () => {
   }
 
   const handleMessageToggle = ()=> {
+    console.log("handle message toggle ",usersWithConversationBackup)
     setUsersWithConversation(usersWithConversationBackup);
   }
 

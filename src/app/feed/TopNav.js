@@ -99,9 +99,11 @@ eventEmitter.on('privateMessage', fetchUnseenMessagesCount);
 
     if(view==='onlineUsers')
     {
+      console.log("toggle online user")
       handleMessageToggle();
     }else
     {
+      console.log("toggle get user")
       getUsers();
     }
   };
