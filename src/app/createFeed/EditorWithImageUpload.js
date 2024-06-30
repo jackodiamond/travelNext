@@ -1,10 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Editor } from 'react-draft-wysiwyg';
 import dynamic from 'next/dynamic';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import MapComponent from '../feed/MapComponent';
+
+const Editor = dynamic(
+  () => import('react-draft-wysiwyg').then((mod) => mod.Editor),
+  { ssr: false }
+);
+
+const MapComponent = dynamic(() => import('../feed/MapComponent'), { ssr: false });
 
 function EditorWithImageUpload({ editorState, onEditorStateChange, handleImageUpload, formData, setLocation }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -165,7 +170,7 @@ const styles = {
     color: 'white',
     border: 'none',
     borderRadius: '50%',
-    cursor: 'pointer', 
+    cursor: 'pointer',
     padding: '10px',
   },
   mapButtonContainer: {
