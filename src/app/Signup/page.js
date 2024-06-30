@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { signupUser, checkUsername } from './signupServerAction'; // Separate server actions for signup and username check
-import './signup.css'; //  Import the CSS file directly
+import './Signup.css'; // Import the CSS file directly
 import { useRouter } from 'next/navigation';
 
 const Signup = () => {

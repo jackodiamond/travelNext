@@ -80,13 +80,15 @@ const Login = () => {
 
         <GoogleLoginComponent/>
         
-        {/** 
+        <p>
+          Do not have account? <Link href="/Signup">Signup instead</Link>
+        </p>
+        {/*
         <p>
           Don't have an account? <Link href="/Signup">Signup instead</Link>
         </p>
         */}
-        
-      </div>
+      </div> 
     </div>
   );
 };

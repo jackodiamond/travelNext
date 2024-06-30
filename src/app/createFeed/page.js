@@ -2,7 +2,7 @@
 
 import React, { useState, useContext,useEffect } from 'react';
 import { EditorState } from 'draft-js';
-//import EditorWithImageUpload from './EditorWithImageUpload';
+import EditorWithImageUpload from './EditorWithImageUpload';
 import TopNav from '../feed/TopNav';
 import { createFeed } from './CreateFeed';
 import './CreateFeed.css'; // Adjust the path based on your structure
@@ -110,7 +110,7 @@ const CreateFeed = () => {
                 style={{ textAlign: 'center' }}
               />
             </div>
-            {/*
+            
             <EditorWithImageUpload
               editorState={formData.content}
               onEditorStateChange={handleEditorChange}
@@ -118,7 +118,7 @@ const CreateFeed = () => {
               formData={formData}
               setLocation={handleLocationChange}
             />
-            */}
+            
             <button type="submit" className="create-feed-button">Create Feed</button>
           </form>
         </div>
