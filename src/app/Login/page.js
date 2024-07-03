@@ -35,17 +35,23 @@ const Login = () => {
     console.log("handle submit!");
     try {
       const data = await loginUser(formData);
+
+      console.log("data resp : ",data)
       // Handle successful login
-      console.log("data after login: " + data.username);
+      console.log("data after login: ", data);
       setUsername(data.username);
       setSocketUser(data.username);
       router.push('/feed');
       login();
       connectToWebSocket();
     } catch (error) {
-      console.error('Login failed:', error);
-      alert('Login failed. Please check your credentials and try again.');
+      console.error('Login failed', error);
+      alert('Login failed. '+error);
     }
+  };
+
+  const guestLogin = () => {
+    router.push('/feed');
   };
 
   return (
@@ -71,14 +77,17 @@ const Login = () => {
             required
             className="login-input"
           />
+           <p>
+          Forgot Password? <Link href="/ForgotPassword">Reset Password</Link>
+        </p>
           <button type="submit">Login</button>
         </form>
 
-        <p>
-          Forgot Password? <Link href="/ForgotPassword">Reset Password</Link>
-        </p>
+       
 
-        <GoogleLoginComponent/>
+        <GoogleLoginComponent className='guest-button'/>
+
+        <button className='guest-button' onClick={guestLogin}>Enter As Guest</button>
         
         <p>
           Do not have account? <Link href="/Signup">Signup instead</Link>

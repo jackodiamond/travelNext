@@ -40,6 +40,7 @@ const Signup = () => {
       // If the username is unique, proceed with signup
       const data = await signupUser(formData);
       console.log('Signup successful:', data);
+      alert('Verification Email Sent');
       router.push('/Login');
     } catch (error) {
       console.error('Signup failed:', error);

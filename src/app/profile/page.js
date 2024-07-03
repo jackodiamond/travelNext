@@ -30,8 +30,8 @@ const ProfilePage = () => {
       console.log("fetch feed! "+authorName);
       const response = await fetch(baseUrl+`/feed/feeds?author=${authorName}`);
       const data = await response.json();
-      console.log("profile data "+data);
-      setFeeds(data);
+      console.log("profile data ",data);
+      setFeeds(data.feeds);
     } catch (error) {
       console.error('Error fetching feeds:', error);
     }
@@ -44,7 +44,7 @@ const ProfilePage = () => {
   useEffect(() => {
     if (!isLoggedIn) {
       // Redirect to "Page Not Found" page if not logged in
-      router.push('/404');
+      router.push('/LoginToView');
     }
   }, [isLoggedIn]);
 

@@ -55,7 +55,7 @@ const Companion = () => {
   useEffect(() => {
     if (!isLoggedIn) {
       // Redirect to "Page Not Found" page if not logged in
-      router.push('/404');
+      router.push('/LoginToView');
     }
   }, [isLoggedIn]);
 

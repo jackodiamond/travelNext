@@ -36,11 +36,12 @@
 }
 
 .login-input::placeholder {
-  color: #aaa; /* Placeholder text color */
+  color: #1f1e1e; /* Placeholder text color */
 }
 
 .login-form button {
   padding: 10px 20px;
+  margin-bottom: 10px;
   background-color: #007bff; /* Blue button color */
   color: white;
   border: none;
@@ -50,4 +51,14 @@
 
 .login-form button:hover {
   background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+.google-button{
+  width: 300px;
+}
+
+.guest-button{
+  width: 300px;
+  margin-top: 10px;
 }
